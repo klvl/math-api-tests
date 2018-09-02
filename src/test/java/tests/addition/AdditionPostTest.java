@@ -21,7 +21,7 @@ class AdditionPostTest extends BaseTest {
     }
 
     @Test
-    void negativeIntegerBelowLowerBoundaryAndNegativeFloatAdditionGetTest() throws Exception {
+    void negativeIntegerBelowLowerBoundaryAndNegativeFloatAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.negativeIntegerBelowLowerBoundaryArgument,
                 Variables.negativeFloatArgument,
@@ -30,7 +30,7 @@ class AdditionPostTest extends BaseTest {
     }
 
     @Test
-    void integerBelowUpperBoundaryAndEmptyAdditionGetTest() throws Exception {
+    void integerBelowUpperBoundaryAndEmptyAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.integerBelowUpperBoundaryArgument,
                 Variables.emptyArgument,
@@ -39,7 +39,7 @@ class AdditionPostTest extends BaseTest {
     }
 
     @Test
-    void integerOnUpperBoundaryAndCharacterAdditionGetTest() throws Exception {
+    void integerOnUpperBoundaryAndCharacterAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.integerOnUpperBoundaryArgument,
                 Variables.characterArgument,
@@ -48,7 +48,7 @@ class AdditionPostTest extends BaseTest {
     }
 
     @Test
-    void negativeOneAndOneAdditionGetTest() throws Exception {
+    void negativeOneAndOneAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.negativeOneArgument,
                 Variables.oneArgument,
