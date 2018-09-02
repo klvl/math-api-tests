@@ -2,6 +2,7 @@ package tests.addition;
 
 import helpers.requesthelpers.PostRequestHelper;
 import helpers.testhelpers.Variables;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.BaseTest;
 
@@ -11,7 +12,7 @@ class AdditionPostTest extends BaseTest {
         requestHelper = new PostRequestHelper();
     }
 
-    @Test
+    @Test @Tag("zeroAndZeroAdditionPostTest")
     void zeroAndZeroAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.zeroArgument,
@@ -20,7 +21,7 @@ class AdditionPostTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test @Tag("negativeIntegerBelowLowerBoundaryAndNegativeFloatAdditionPostTest")
     void negativeIntegerBelowLowerBoundaryAndNegativeFloatAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.negativeIntegerBelowLowerBoundaryArgument,
@@ -29,7 +30,7 @@ class AdditionPostTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test @Tag("integerBelowUpperBoundaryAndEmptyAdditionPostTest")
     void integerBelowUpperBoundaryAndEmptyAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.integerBelowUpperBoundaryArgument,
@@ -38,7 +39,7 @@ class AdditionPostTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test @Tag("integerOnUpperBoundaryAndCharacterAdditionPostTest")
     void integerOnUpperBoundaryAndCharacterAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.integerOnUpperBoundaryArgument,
@@ -47,7 +48,7 @@ class AdditionPostTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test @Tag("negativeOneAndOneAdditionPostTest")
     void negativeOneAndOneAdditionPostTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.negativeOneArgument,
