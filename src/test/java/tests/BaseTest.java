@@ -9,8 +9,6 @@ public class BaseTest {
 
     protected RequestHelper requestHelper;
 
-    protected Variables variables;
-
     protected void assertTwoArgumentsResponse(String arg1, String arg2, String expectedResponse) throws Exception {
         String response = requestHelper.sendRequestForAddition(arg1, arg2);
 
