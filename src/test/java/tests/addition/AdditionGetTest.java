@@ -2,6 +2,7 @@ package tests.addition;
 
 import helpers.requesthelpers.GetRequestHelper;
 import helpers.testhelpers.Variables;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.BaseTest;
 
@@ -11,7 +12,7 @@ class AdditionGetTest extends BaseTest {
         requestHelper = new GetRequestHelper();
     }
 
-    @Test
+    @Test @Tag("zeroAndZeroAdditionGetTest")
     void zeroAndZeroAdditionGetTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.zeroArgument,
@@ -20,7 +21,7 @@ class AdditionGetTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test @Tag("negativeIntegerBelowLowerBoundaryAndNegativeFloatAdditionGetTest")
     void negativeIntegerBelowLowerBoundaryAndNegativeFloatAdditionGetTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.negativeIntegerBelowLowerBoundaryArgument,
@@ -29,7 +30,7 @@ class AdditionGetTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test @Tag("integerBelowUpperBoundaryAndEmptyAdditionGetTest")
     void integerBelowUpperBoundaryAndEmptyAdditionGetTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.integerBelowUpperBoundaryArgument,
@@ -38,7 +39,7 @@ class AdditionGetTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test @Tag("integerOnUpperBoundaryAndCharacterAdditionGetTest")
     void integerOnUpperBoundaryAndCharacterAdditionGetTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.integerOnUpperBoundaryArgument,
@@ -47,7 +48,7 @@ class AdditionGetTest extends BaseTest {
         );
     }
 
-    @Test
+    @Test @Tag("negativeOneAndOneAdditionGetTest")
     void negativeOneAndOneAdditionGetTest() throws Exception {
         assertTwoArgumentsResponse(
                 Variables.negativeOneArgument,
