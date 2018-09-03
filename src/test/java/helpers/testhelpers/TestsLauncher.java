@@ -1,4 +1,4 @@
-package tests.addition;
+package helpers.testhelpers;
 
 import org.junit.platform.engine.discovery.DiscoverySelectors;
 import org.junit.platform.launcher.Launcher;
@@ -19,8 +19,6 @@ public class TestsLauncher {
         LauncherDiscoveryRequestBuilder requestBuilder = LauncherDiscoveryRequestBuilder
                 .request()
                 .selectors(DiscoverySelectors.selectPackage("tests.addition"));
-
-        args = new String[] {"zeroAndZeroAdditionGetTest"};
 
         if (args.length > 0) {
             requestBuilder = requestBuilder.filters(
