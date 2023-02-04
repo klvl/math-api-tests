@@ -1,4 +1,4 @@
-package helpers.testhelpers;
+package io.klvl;
 
 import org.junit.platform.engine.discovery.DiscoverySelectors;
 import org.junit.platform.launcher.Launcher;
@@ -12,7 +12,7 @@ import static org.junit.platform.launcher.TagFilter.includeTags;
 
 public class TestsLauncher {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         LauncherDiscoveryRequest request;
 

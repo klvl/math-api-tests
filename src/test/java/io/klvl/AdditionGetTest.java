@@ -1,10 +1,8 @@
-package tests.addition;
+package io.klvl;
 
-import helpers.requesthelpers.GetRequestHelper;
-import helpers.testhelpers.Variables;
+import io.klvl.requests.GetRequestHelper;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.BaseTest;
 
 class AdditionGetTest extends BaseTest {
 

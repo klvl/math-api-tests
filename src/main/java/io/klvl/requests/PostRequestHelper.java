@@ -1,4 +1,4 @@
-package helpers.requesthelpers;
+package io.klvl.requests;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;

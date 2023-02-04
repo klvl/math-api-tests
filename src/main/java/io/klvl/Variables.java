@@ -1,4 +1,4 @@
-package helpers.testhelpers;
+package io.klvl;
 
 public class Variables {
 

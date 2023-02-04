@@ -1,7 +1,6 @@
-package tests;
+package io.klvl;
 
-import helpers.requesthelpers.RequestHelper;
-import helpers.testhelpers.Variables;
+import io.klvl.requests.RequestHelper;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 

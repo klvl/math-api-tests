@@ -1,4 +1,4 @@
-package helpers.requesthelpers;
+package io.klvl.requests;
 
 public class UrlExpressionHelper {
 

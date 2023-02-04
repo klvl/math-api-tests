@@ -1,4 +1,4 @@
-package helpers.requesthelpers;
+package io.klvl.requests;
 
 import org.asynchttpclient.AsyncHttpClient;
 import org.asynchttpclient.Response;
