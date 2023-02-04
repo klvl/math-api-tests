@@ -3,6 +3,8 @@
 
 # Gradle
 .gradle
+!gradle-wrapper.jar
+!gradle-wrapper.properties
 
 # Build
 build
