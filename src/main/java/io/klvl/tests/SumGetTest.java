@@ -1,5 +1,8 @@
-package io.klvl;
+package io.klvl.tests;
 
+import io.klvl.api.MathAPI;
+import io.klvl.api.RestUtil;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.net.http.HttpResponse;
@@ -9,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SumGetTest {
 
     @Test
+    @Tag("positive")
     public void testGetZeroSum() {
         String expression = "0+0";
         String expectedResult = "0";
@@ -24,7 +28,8 @@ public class SumGetTest {
     }
 
     @Test
-    public void testGetNegativeLargeSum() {
+    @Tag("positive")
+    public void testGetLargeSum() {
         String expression = "-1001+(-0.002)";
         String expectedResult = "-1001.002";
         int statusCode = 200;
@@ -39,6 +44,7 @@ public class SumGetTest {
     }
 
     @Test
+    @Tag("negative")
     public void testGetInvalidMissedValue() {
         String expression = "999+";
         String expectedResult = "Error: Unexpected end of expression (char 5)";
@@ -54,6 +60,7 @@ public class SumGetTest {
     }
 
     @Test
+    @Tag("negative")
     public void testGetInvalidWithCharacterSum() {
         String expression = "1000+*";
         String expectedResult = "Error: Value expected (char 6)";
@@ -69,6 +76,7 @@ public class SumGetTest {
     }
 
     @Test
+    @Tag("positive")
     public void testGetMinusPlusSum() {
         String expression = "-1+1";
         String expectedResult = "0";

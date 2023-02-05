@@ -1,4 +1,4 @@
-package io.klvl;
+package io.klvl.api;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;

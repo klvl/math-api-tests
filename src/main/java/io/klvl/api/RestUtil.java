@@ -1,4 +1,4 @@
-package io.klvl;
+package io.klvl.api;
 
 import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;

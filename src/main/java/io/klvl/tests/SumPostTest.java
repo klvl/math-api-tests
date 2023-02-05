@@ -1,6 +1,9 @@
-package io.klvl;
+package io.klvl.tests;
 
 import com.google.gson.Gson;
+import io.klvl.api.MathAPI;
+import io.klvl.api.RestUtil;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.net.http.HttpResponse;
@@ -12,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class SumPostTest {
 
     @Test
+    @Tag("positive")
     public void testPostZero() {
         String expression = "0+0";
         String expectedResult = "0";
@@ -30,6 +34,7 @@ public class SumPostTest {
     }
 
     @Test
+    @Tag("positive")
     public void testPostNegative() {
         String expression = "-1001+(-0.002)";
         String expectedResult = "-1001.002";
@@ -48,8 +53,9 @@ public class SumPostTest {
     }
 
     @Test
+    @Tag("negative")
     @SuppressWarnings("unchecked")
-    public void testPostInvalidMissedValue() {
+    public void testPostMissedValue() {
         String expression = "999+";
         String expectedError = "Error: Unexpected end of expression (char 5)";
         int statusCode = 400;
@@ -71,8 +77,9 @@ public class SumPostTest {
     }
 
     @Test
+    @Tag("negative")
     @SuppressWarnings("unchecked")
-    public void testPostInvalidWithCharacterSum() {
+    public void testPostWithCharacterSum() {
         String expression = "1000+*";
         String expectedError = "Error: Value expected (char 6)";
         int statusCode = 400;
@@ -94,6 +101,7 @@ public class SumPostTest {
     }
 
     @Test
+    @Tag("positive")
     public void testPostMinusPlusSum() {
         String expression = "-1+1";
         String expectedResult = "0";
